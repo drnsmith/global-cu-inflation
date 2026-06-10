@@ -1,0 +1,76 @@
+2026-06-10 13:39:26,637 - INFO - Started: 2026-06-10 13:39:26.637733
+2026-06-10 13:39:26,637 - INFO - Output: /Users/natashasmith/projects/global-cu-inflation/data/raw
+2026-06-10 13:39:26,637 - INFO - ============================================================
+2026-06-10 13:39:26,637 - INFO - BLOCK 1A: OECD Capacity Utilisation (new API)
+2026-06-10 13:39:26,637 - INFO - ============================================================
+2026-06-10 13:39:26,637 - INFO - Fetching CU: United States...
+2026-06-10 13:39:27,797 - WARNING - No OECD CU data for USA (404 — country may not publish this series)
+2026-06-10 13:39:28,799 - INFO - Fetching CU: Germany...
+2026-06-10 13:39:29,784 - WARNING - No OECD CU data for DEU (404 — country may not publish this series)
+2026-06-10 13:39:30,788 - INFO - Fetching CU: France...
+2026-06-10 13:39:31,862 - WARNING - No OECD CU data for FRA (404 — country may not publish this series)
+2026-06-10 13:39:32,864 - INFO - Fetching CU: Japan...
+2026-06-10 13:39:33,826 - WARNING - No OECD CU data for JPN (404 — country may not publish this series)
+2026-06-10 13:39:34,827 - INFO - Fetching CU: United Kingdom...
+2026-06-10 13:39:36,038 - WARNING - No OECD CU data for GBR (404 — country may not publish this series)
+2026-06-10 13:39:37,042 - INFO - Fetching CU: Canada...
+2026-06-10 13:39:38,185 - WARNING - No OECD CU data for CAN (404 — country may not publish this series)
+2026-06-10 13:39:39,191 - INFO - Fetching CU: New Zealand...
+2026-06-10 13:39:40,188 - WARNING - No OECD CU data for NZL (404 — country may not publish this series)
+2026-06-10 13:39:41,196 - ERROR - No OECD CU data retrieved.
+2026-06-10 13:39:41,199 - INFO - ============================================================
+2026-06-10 13:39:41,199 - INFO - BLOCK 1B: FRED — Industrial Production + US CU
+2026-06-10 13:39:41,199 - INFO - ============================================================
+2026-06-10 13:39:41,199 - INFO - Fetching US Capacity Utilisation (TCU)...
+2026-06-10 13:39:56,349 - INFO -   ✓ US CU: 180 observations
+2026-06-10 13:39:56,433 - INFO - ✓ Saved: /Users/natashasmith/projects/global-cu-inflation/data/raw/fred_us_cu_monthly.csv
+2026-06-10 13:39:56,433 - INFO - Fetching Industrial Production indices...
+2026-06-10 13:39:56,433 - INFO -   United States (INDPRO)...
+2026-06-10 13:39:56,905 - INFO -   ✓ United States: 180 observations
+2026-06-10 13:39:57,414 - INFO -   Germany (DEUPROINDMISMEI)...
+2026-06-10 13:39:57,818 - INFO -   ✓ Germany: 171 observations
+2026-06-10 13:39:58,330 - INFO -   France (FRAPROINDMISMEI)...
+2026-06-10 13:39:58,765 - INFO -   ✓ France: 171 observations
+2026-06-10 13:39:59,276 - INFO -   Japan (JPNPROINDMISMEI)...
+2026-06-10 13:39:59,995 - INFO -   ✓ Japan: 171 observations
+2026-06-10 13:40:00,503 - INFO -   United Kingdom (GBRPROINDMISMEI)...
+2026-06-10 13:40:00,927 - INFO -   ✓ United Kingdom: 171 observations
+2026-06-10 13:40:01,436 - INFO -   Canada (CANPROINDMISMEI)...
+2026-06-10 13:40:02,059 - INFO -   ✓ Canada: 170 observations
+2026-06-10 13:40:02,570 - INFO -   New Zealand (NZLPROINDMISMEI)...
+2026-06-10 13:40:03,055 - WARNING -   FRED NZLPROINDMISMEI: HTTP 400
+2026-06-10 13:40:03,578 - INFO - ✓ Saved: /Users/natashasmith/projects/global-cu-inflation/data/raw/fred_industrial_production.csv (1034 records)
+2026-06-10 13:40:03,578 - INFO - ============================================================
+2026-06-10 13:40:03,578 - INFO - BLOCK 1C: Ember Electricity Data
+2026-06-10 13:40:03,578 - INFO - ============================================================
+2026-06-10 13:40:03,578 - INFO - Trying: https://ember-climate.org/app/uploads/2022/07/monthly_full_release_long_format.csv
+2026-06-10 13:40:07,576 - WARNING -   Failed: Error tokenizing data. C error: Expected 1 fields in line 5, saw 2
+
+2026-06-10 13:40:07,576 - INFO - Trying: https://raw.githubusercontent.com/owid/energy-data/master/owid-energy-data.csv
+2026-06-10 13:40:09,821 - INFO -   Columns: ['country', 'year', 'iso_code', 'population', 'gdp', 'biofuel_cons_change_pct', 'biofuel_cons_change_twh', 'biofuel_cons_per_capita', 'biofuel_consumption', 'biofuel_elec_per_capita']
+2026-06-10 13:40:09,826 - INFO - ✓ Saved: /Users/natashasmith/projects/global-cu-inflation/data/raw/electricity_generation_annual.csv (105 records) [OWID format]
+2026-06-10 13:40:09,828 - INFO - ============================================================
+2026-06-10 13:40:09,828 - INFO - BLOCK 1D: World Bank — Inflation + Macro Controls
+2026-06-10 13:40:09,828 - INFO - ============================================================
+2026-06-10 13:40:09,828 - INFO - Fetching inflation_cpi_pct...
+2026-06-10 13:40:10,849 - INFO -   ✓ inflation_cpi_pct: 105 records
+2026-06-10 13:40:11,354 - INFO - Fetching gdp_per_capita_usd...
+2026-06-10 13:40:12,786 - INFO -   ✓ gdp_per_capita_usd: 105 records
+2026-06-10 13:40:13,286 - INFO - Fetching unemployment_pct...
+2026-06-10 13:40:16,180 - INFO -   ✓ unemployment_pct: 105 records
+2026-06-10 13:40:16,681 - INFO - Fetching trade_pct_gdp...
+2026-06-10 13:40:18,081 - INFO -   ✓ trade_pct_gdp: 105 records
+2026-06-10 13:40:18,584 - INFO - Fetching m2_pct_gdp...
+2026-06-10 13:40:19,396 - INFO -   ✓ m2_pct_gdp: 58 records
+2026-06-10 13:40:19,922 - INFO - ✓ Saved: /Users/natashasmith/projects/global-cu-inflation/data/raw/world_bank_macro.csv (105 records)
+2026-06-10 13:40:19,923 - INFO - ============================================================
+2026-06-10 13:40:19,923 - INFO - BLOCK 1E: VIIRS Nightlights (from LaCie)
+2026-06-10 13:40:19,923 - INFO - ============================================================
+2026-06-10 13:40:19,933 - INFO -   Loaded nightlights panel: (4301, 5)
+2026-06-10 13:40:19,933 - INFO -   Columns: ['iso3', 'year', 'region', 'luminosity_mean', 'luminosity_sum']
+2026-06-10 13:40:19,944 - INFO - ✓ Copied: /Users/natashasmith/projects/global-cu-inflation/data/raw/viirs_nightlights_panel.csv
+2026-06-10 13:40:19,945 - INFO - ============================================================
+2026-06-10 13:40:19,945 - INFO - BLOCK 1F: World Bank Statistical Performance Indicators
+2026-06-10 13:40:19,945 - INFO - ============================================================
+2026-06-10 13:40:21,013 - INFO - ✓ Saved: /Users/natashasmith/projects/global-cu-inflation/data/raw/wb_spi_scores.csv (1649 records, 189 countries)
+2026-06-10 13:40:21,015 - INFO - Completed: 2026-06-10 13:40:21.015554

@@ -1,0 +1,1 @@
+CAN: No OECD BTS CU series available via FRED. Statistics Canada publishes CU via CANSIM 16-10-0117-01 (requires manual download). Using industrial production index as proxy for CAN in estimation.
